@@ -1,0 +1,265 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  padding: 0;
+  padding-top: 5rem;
+  box-sizing: border-box;
+  background-color: bisque;
+  text-align: center;
+  transition: 0.3s ease-in;
+  overflow: hidden;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.6),
+      rgba(34, 34, 34, 0.6)
+    ),
+    url(/public/img/globe.jpg);
+}
+
+.card-div {
+  margin: 2rem auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  width: 25rem;
+  height: auto;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: left;
+  animation: appear 0.5s;
+}
+
+.card-img {
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+}
+
+.card-main {
+  padding: 0 2rem;
+}
+
+.card-h1 {
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: -6px;
+}
+
+.card-h3 {
+  font-size: 1rem;
+  color: rgb(170, 164, 164);
+}
+
+.card-p {
+  font-size: 1.7rem;
+  padding: 0.1rem 2rem;
+}
+
+.btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  background-color: transparent;
+  padding: 0.5rem 2.5rem;
+  color: rgb(248, 248, 247);
+
+  border: 2px solid wheat;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  color: wheat;
+}
+
+.btn-countries {
+  position: absolute;
+  right: 0;
+  border: none;
+  margin-right: 1.5rem;
+}
+
+.input {
+  font-size: 1.5rem;
+  border-bottom-left-radius: 5px;
+  padding: 0.5rem 2.5rem;
+  background-color: rgba(245, 222, 179, 0.3);
+  border: 2px solid wheat;
+  color: white;
+  outline: none;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.icon {
+  font-size: 1.7rem;
+  margin-right: 1rem;
+}
+
+.man {
+  font-size: 1.7rem;
+  margin-right: 1.5rem;
+}
+
+.countries-list {
+  color: rgb(228, 220, 220);
+  font-size: 1.5rem;
+  height: 20rem;
+  width: 14rem;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  animation: moveInRight 0.5s;
+  cursor: pointer;
+  border: 1px solid rgba(245, 222, 179, 0.8);
+  background-color: rgba(245, 222, 179, 0.2);
+  border-radius: 5px;
+}
+
+.name {
+  color: rgb(248, 248, 247);
+  transition: 0.3s;
+}
+
+.name:hover {
+  color: wheat;
+}
+.countries-list::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+.countries-list::-webkit-scrollbar-track {
+  background-color: rgba(245, 222, 179, 0.4);
+  border-radius: 5px;
+}
+
+.countries-list::-webkit-scrollbar-thumb {
+  background-color: rgba(245, 222, 179, 0.8);
+  border-radius: 5px;
+}
+
+.countries-list-hidden {
+  display: none;
+}
+
+.matching-container {
+  background-color: rgba(245, 222, 179, 0.3);
+  color: white;
+  height: auto;
+  text-align: left;
+  width: 24.6rem;
+  margin: 0 49rem 0;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.matching-container p {
+  padding: 0.5rem 2.5rem;
+  margin: 0;
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translatex(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: 0;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* MEDIA */
+
+@media (max-width: 160em) {
+  html {
+    font-size: 75%;
+  }
+
+  body {
+    margin-top: 15rem;
+  }
+
+  .countries-list {
+    height: 40rem;
+  }
+}
+
+@media (max-width: 87.5em) {
+  html {
+    font-size: 65%;
+  }
+
+  body {
+    margin-top: 7rem;
+  }
+
+  .countries-list {
+    height: 30rem;
+  }
+}
+
+@media (max-width: 82.25em) {
+  body {
+    height: 90rem;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 50em) {
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    height: 100rem;
+    margin-top: 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input {
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .btn {
+    border-radius: 5px;
+  }
+
+  .btn-countries {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .countries-list {
+    top: 22rem;
+    height: 20rem;
+  }
+
+  .name {
+    color: white;
+    color: black;
+    font-weight: 700;
+  }
+}
